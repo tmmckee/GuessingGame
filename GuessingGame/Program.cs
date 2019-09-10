@@ -6,7 +6,21 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            //time to play a game
+
+            Guess guess = new Guess();
+            guess.Range = 1000;
+            int[] array = guess.CreateArray(guess.Range);
+            int randomNumber = guess.CreateRandomNumber(array);
+            guess.GuessToWin(randomNumber, guess.Range);
+
+            //time for the computer to play
+            ComputerGuess computer =new ComputerGuess();
+            int max = computer.GetMax();
+            int number = computer.GetNumber();
+            computer.ComputerGuessesToWin(number, 1, max);
+
         }
     }
 }
