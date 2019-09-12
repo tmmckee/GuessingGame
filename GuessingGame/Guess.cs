@@ -14,14 +14,12 @@ namespace GuessingGame
             {
                 if (value < 0 || value > 1000)
                 {
-                    throw new ArgumentOutOfRangeException($"{value} should be between 0 and 1000.");
+                    throw new ArgumentOutOfRangeException($"Range should be between 0 and 1000.");
                 }
-                else { range = value; }
+                else { this.range = value; }
 
             }
         }
-
-      
 
         public int CreateRandomNumber(int[] array)
         {
@@ -47,8 +45,6 @@ namespace GuessingGame
                 Console.WriteLine(i);
             }
         }
-
-
 
         public void GuessToWin(int randomNumber,  int lastNumber)
         {
@@ -77,7 +73,5 @@ namespace GuessingGame
                 }
             } while (win == false);
         }
-
-        
     }
 }

@@ -10,6 +10,7 @@ namespace GuessingGame
             //time to play a game
 
             Guess guess = new Guess();
+            guess.Range = 1001;
             guess.Range = 1000;
             int[] array = guess.CreateArray(guess.Range);
             int randomNumber = guess.CreateRandomNumber(array);
